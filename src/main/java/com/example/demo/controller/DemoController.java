@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 @RestController
 public class DemoController {
-    @GetMapping("/demo")
+    @PostMapping("/demo")
     public void getDemo(MultipartFile file, int n) throws IOException {
         // n = 1～2はファイルクローズ漏れのある実装
         // n = 3～4はファイルクローズ漏れのない実装
